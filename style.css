@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #E49393;
+    min-height: 1000px;
+}
+
+.jumbotron {
+    padding-top: 1.5rem;
+}
+
+.gallery {
+    margin: auto;
+    
+}
+
+.gallery .gambar1{
+    height: 300px;
+    width: 150px;
+
+} 
+
+.greetings {
+    padding-top: 1.5rem;
+}
