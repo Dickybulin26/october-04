@@ -18,6 +18,8 @@ body {
 
 .gallery {
     margin: auto;
+    display: flex;
+    justify-content: center;
     
 }
 
