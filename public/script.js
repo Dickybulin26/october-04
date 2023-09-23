@@ -1,9 +1,10 @@
 
 
-const b =  document.querySelector('button.button--no')
-b.addEventListener('mousehover',MouseHover)
 
-function mouseHover(){
+const b =  document.querySelector('button.button--no')
+b.addEventListener('mousehover',moveHover)
+
+function moveHover(){
     const i = Math.floor(Math.random()*500)+1;
     const j = Math.floor(Math.random()*500)+1;
 
