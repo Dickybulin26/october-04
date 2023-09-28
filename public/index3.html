@@ -1,184 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset ="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Image Slider in HTML/CSS</title>
-</head>
-<style>
-    body{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ccc;
-}
-
-.slider{
-  width: 800px;
-  height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.slides{
-  width: 500%;
-  height: 500px;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  width: 20%;
-  transition: 2s;
-}
-
-.slide img{
-  width: 800px;
-  height: 500px;
-}
-
-.navigation-mannual{
-  position: absolute;
-  width: 800px;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.mannual-btn{
-  border: 2px solid #ccc;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.mannual-btn:not(:last-child){
-  margin-right: 40px;
-}
-
-.mannual-btn:hover{
-  background-color: #ccc;
-}
-
-#radio1:checked ~ .first{
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-  margin-left: -20%;
-}
-
-#radio3:checked ~ .first{
-  margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-  margin-left: -60%;
-}
-
-/* Automatic Navigation */
-.navigation-auto{
-  position: absolute;
-  display: flex;
-  width: 800px;
-  justify-content: center;
-  margin-top: 460px;
-}
-
-.navigation-auto div{
-  border: 2px solid #333;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-}
-
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
-}
-
-#radio1:checked ~.navigation-auto .auto-btn-1{
-  background: #ccc;
-}
-
-#radio2:checked ~.navigation-auto .auto-btn-2{
-  background: #ccc;
-}
-
-
-#radio3:checked ~.navigation-auto .auto-btn-3{
-  background: #ccc;
-}
-
-#radio4:checked ~.navigation-auto .auto-btn-4{
-  background: #ccc;
-}
-</style>
-<body>
-  <!-- Image Slider Start -->
-  <div class="slider">
-    <div class="slides">
-      <!-- Radio Button Start  -->
-      <input type="radio" name="radio-btn" id="radio1">
-      <input type="radio" name="radio-btn" id="radio2">
-      <input type="radio" name="radio-btn" id="radio3">
-      <input type="radio" name="radio-btn" id="radio4">
-      <!-- Radio Button Close  -->
-
-      <!-- Slide Image Start -->
-      <div class="slide first">
-        <img src="img/Aloudya f.jpg" alt="">
-      </div>
-      <div class="slide">
-        <img src="img/Aloudya f.jpg" alt="">
-      </div>
-      <div class="slide">
-        <img src="img/Aloudya f.jpg" alt="">
-      </div>
-      <div class="slide">
-        <img src="img/Aloudya f.jpg" alt="">
-      </div>
-      <!-- Slide Image Close -->
-
-      <!-- Automatic Navigation Start -->
-      <div class="navigation-auto">
-        <div class="auto-btn-1"></div>
-        <div class="auto-btn-2"></div>
-        <div class="auto-btn-3"></div>
-        <div class="auto-btn-4"></div>
-      </div>
-      <!-- Automatic Navigation Close -->
-    </div>
-	
-      <!-- Mannual Navigation Start -->
-      <div class="navigation-mannual">
-        <label for="radio1" class="mannual-btn"></label>
-        <label for="radio2" class="mannual-btn"></label>
-        <label for="radio3" class="mannual-btn"></label>
-        <label for="radio4" class="mannual-btn"></label>
-      </div>
-      <!-- Mannual Navigation Close -->
-  </div>
-  <!-- Image Slider Close -->
-  <script>
-    var counter = 1;
-    setInterval(function()  {
-      document.getElementById('radio'+ counter).checked = true;
-      counter++; 
-
-      if(counter>4){
-        counter=1
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nyoba</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-    }, 5000);
-  </script>
-</body>
+      #carouselExampleInterval {
+        max-height: 300px;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="../img/Aloudya f.jpg"
+            class="d-block w-100"
+            alt="gambar 1"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="../img/alou - bella.jpg"
+            class="d-block w-100"
+            alt="gambar 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="../img/Alo.jpg" class="d-block w-100" alt="gambar 3" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nyoba</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 10%;
+        margin-left: 20%;
+      }
+
+      #slider {
+        position: relative;
+        width: 500px;
+        height: 265px;
+
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      }
+      #slider ul {
+        position: relative;
+        list-style: none;
+        height: 100%;
+        width: 10000%;
+        padding: 0;
+        margin: 0;
+        transition: all 750ms ease;
+        left: 0;
+      }
+      #slider ul li {
+        position: relative;
+        height: 100%;
+
+        float: left;
+      }
+      #slider ul li img {
+        width: 500px;
+        height: 265px;
+      }
+
+      #slider #prev,
+      #slider #next {
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 2rem;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 150ms ease;
+      }
+      #slider #prev:hover,
+      #slider #next:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        text-shadow: 0;
+      }
+      #slider #prev {
+        left: 10px;
+      }
+      #slider #next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider">
+      <ul id="slideWrap">
+        <li>
+          <img
+            src="../img/alloodd.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="../img/alloodd.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="../img/alloodd.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="../img/alloodd.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="../img/alloodd.jpeg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <a id="prev" href="#">&#8810;</a>
+      <a id="next" href="#">&#8811;</a>
+    </div>
+
+    <script>
+      var responsiveSlider = function () {
+        var slider = document.getElementById("slider");
+        var sliderWidth = slider.offsetWidth;
+        var slideList = document.getElementById("slideWrap");
+        var count = 1;
+        var items = slideList.querySelectorAll("li").length;
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+
+        window.addEventListener("resize", function () {
+          sliderWidth = slider.offsetWidth;
+        });
+
+        var prevSlide = function () {
+          if (count > 1) {
+            count = count - 2;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          } else if ((count = 1)) {
+            count = items - 1;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+        };
+
+        var nextSlide = function () {
+          if (count < items) {
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          } else if ((count = items)) {
+            slideList.style.left = "0px";
+            count = 1;
+          }
+        };
+
+        next.addEventListener("click", function () {
+          nextSlide();
+        });
+
+        prev.addEventListener("click", function () {
+          prevSlide();
+        });
+
+        setInterval(function () {
+          nextSlide();
+        }, 5000);
+      };
+
+      window.onload = function () {
+        responsiveSlider();
+      };
+    </script>
+  </body>
+</html> -->

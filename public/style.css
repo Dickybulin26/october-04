@@ -1,148 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
- * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-color: #e69b9b;
-    min-height: 1000px;
+  background-color: #e69b9b;
+  min-height: 1000px;
 }
 
 .jumbotron {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .gallery {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .greetings {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
-.slider{
-    width: 240px;
-    height: 350px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .slides{
-    width: 500%;
-    height: 500px;
-    display: flex;
-  }
-  
-  .slides input{
-    display: none;
-  }
-  
-  .slide{
-    width: 20%;
-    transition: 2s;
-  }
-  
-  .slide img{
-    width: 240px;
-    height: 350px;
-  }
-  
-  .navigation-mannual{
-    position: absolute;
-    width: 236px;
-    margin-top: -174px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .mannual-btn{
-    border: 2px solid #ccc;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-  
-  .mannual-btn:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  .mannual-btn:hover{
-    background-color: #ccc;
-  }
-  
-  #radio1:checked ~ .first{
-    margin-left: 0;
-  }
-  
-  #radio2:checked ~ .first{
-    margin-left: -20%;
-  }
-  
-  #radio3:checked ~ .first{
-    margin-left: -40%;
-  }
-  
-  #radio4:checked ~ .first{
-    margin-left: -60%;
-  }
+.slider {
+  width: 240px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  #radio5:checked ~ .first{
-    margin-left: -80%;
-  }
-  
-  /* Automatic Navigation */
-  .navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 236px;
-    justify-content: center;
-    margin-top: 326px;
-  }
-  
-  .navigation-auto div{
-    border: 2px solid #333;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  #radio1:checked ~.navigation-auto .auto-btn-1{
-    background: #ccc;
-  }
-  
-  #radio2:checked ~.navigation-auto .auto-btn-2{
-    background: #ccc;
-  }
-  
-  
-  #radio3:checked ~.navigation-auto .auto-btn-3{
-    background: #ccc;
-  }
-  
-  #radio4:checked ~.navigation-auto .auto-btn-4{
-    background: #ccc;
-  }
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
 
-  #radio5:checked ~.navigation-auto .auto-btn-4{
-    background: #ccc;
-  }
+.slides input {
+  display: none;
+}
 
+.slide {
+  width: 20%;
+  transition: 2s;
+}
 
+.slide img {
+  width: 240px;
+  height: 350px;
+}
 
+.navigation-mannual {
+  position: absolute;
+  width: 236px;
+  margin-top: -174px;
+  display: flex;
+  justify-content: center;
+}
 
+.mannual-btn {
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
 
+.mannual-btn:not(:last-child) {
+  margin-right: 40px;
+}
 
+.mannual-btn:hover {
+  background-color: #ccc;
+}
 
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
 
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+/* Automatic Navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 236px;
+  justify-content: center;
+  margin-top: 326px;
+}
+
+.navigation-auto div {
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn-1 {
+  background: #ccc;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn-2 {
+  background: #ccc;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn-3 {
+  background: #ccc;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn-4 {
+  background: #ccc;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn-4 {
+  background: #ccc;
+}
+
+footer {
+  background-color: #f3f4f5;
+}
