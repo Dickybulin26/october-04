@@ -6,8 +6,8 @@ body {
   height: auto;
 }
 body {
-  /* background: #e69b9b; */
-  background-image: url("/img/pink podium bg.jpg");
+  background: #e69b9b;
+  /* background-image: url("/img/pink podium bg.jpg"); */
 }
 
 #cake {
@@ -118,4 +118,8 @@ p {
 .next-button {
   justify-content: center;
   display: flex;
+}
+
+.nama {
+  text-shadow: 2px 2px 8px #ffff;
 }

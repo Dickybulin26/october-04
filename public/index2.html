@@ -12,11 +12,30 @@
     crossorigin="anonymous"
   />
   <style>
+    img {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 240px;
+      width: 320px;
+      /* width: 50%; */
+      display: block;
+      /* justify-content: center; */
+    }
+
     h1 {
       font-size: 4.5rem;
       display: block;
       position: absolute;
     }
+
+    h2 {
+      margin-top: 80px;
+      font-size: 4rem;
+      display: block;
+      position: absolute;
+    }
+
     .app {
       width: 100%;
       height: 100vh;
@@ -25,7 +44,7 @@
     }
 
     .buttonGroup {
-      margin-top: 150px;
+      margin-top: 200px;
     }
 
     button {
@@ -38,13 +57,16 @@
     }
 
     .button--no {
-      right: 50%;
+      /* right: 50%; */
+      margin: 0 -50px;
+      padding: -1px 30px;
     }
   </style>
   <body>
+    <img src="../img/flower.jpeg" alt="flower" />
     <div class="app">
-      <h1>Hello World!</h1>
-
+      <h1>I Have Crush On You</h1>
+      <h2>Would You like To Be My Girlfriend?</h2>
       <div class="buttonGroup">
         <a href="#">
           <button type="button" class="button--yes btn btn-success">Yes</button>
