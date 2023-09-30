@@ -8,7 +8,7 @@
 
 body {
   background-color: #e69b9b;
-  min-height: 1000px;
+  /* min-height: 1000px; */
 }
 
 .jumbotron {
@@ -49,10 +49,12 @@ body {
 
 .slide img {
   width: 240px;
-  height: 350px;
+  height: 450px;
+  border: solid #f3f4f5 5px;
+  box-shadow: 5px #000;
 }
 
-.navigation-mannual {
+/* .navigation-mannual {
   position: absolute;
   width: 236px;
   margin-top: -174px;
@@ -97,7 +99,7 @@ body {
 }
 
 /* Automatic Navigation */
-.navigation-auto {
+/* .navigation-auto {
   position: absolute;
   display: flex;
   width: 236px;
@@ -134,7 +136,7 @@ body {
 
 #radio5:checked ~ .navigation-auto .auto-btn-4 {
   background: #ccc;
-}
+}  */
 
 footer {
   background-color: #f3f4f5;
