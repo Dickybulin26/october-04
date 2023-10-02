@@ -6,6 +6,17 @@
     <title>Thanks 🌹</title>
   </head>
   <body>
-    
+      
   </body>
+
+  <script>
+    function playSound(audioName, loop){
+      let audio = new Audio(audioName)
+      audio.loop = loop
+      audio.play()
+    }
+
+    playSound("../sound/we-fell-in-love-in-october-lyrics.wav",true)
+  </script>
+
 </html>
