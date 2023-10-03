@@ -3,20 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thanks 🌹</title>
+    <title>4 Oktober</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
   </head>
+  <style>
+    body {
+      height: auto;
+      width: auto;
+      background-image: url("../img/pink_background1-transformed.jpeg");
+      justify-content: center;
+      display: flex;
+    }
+
+    h1 {
+      margin: 5rem;
+      color: #ffff;
+      text-shadow: 2px 2px 8px #ffff;
+      font-size: 6rem;
+    }
+  </style>
   <body>
-      
+    <div class="text">
+      <h1 id="close">
+        Thank You
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          fill="currentColor"
+          class="bi bi-heart-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+          />
+        </svg>
+      </h1>
+    </div>
   </body>
 
   <script>
-    function playSound(audioName, loop){
-      let audio = new Audio(audioName)
-      audio.loop = loop
-      audio.play()
+    function playSound(audioName, loop) {
+      let audio = new Audio(audioName);
+      audio.loop = loop;
+      audio.play();
     }
 
-    playSound("../sound/we-fell-in-love-in-october-lyrics.wav",true)
+    // playSound("../sound/we-fell-in-love-in-october-lyrics.wav", true);
   </script>
-
 </html>
